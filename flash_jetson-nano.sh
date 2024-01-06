@@ -7,4 +7,4 @@ echo Extracting ${L4T_RELEASE_PACKAGE}
 tar xf ${L4T_RELEASE_PACKAGE}
 docker pull nvcr.io/nvidia/jetson-linux-flash-x86:${SW_VERSION}
 docker run -t --privileged --net=host -v /dev/bus/usb:/dev/bus/usb -v ./:/workspace nvcr.io/nvidia/jetson-linux-flash-x86:${SW_VERSION} bash /workspace/Linux_for_Tegra/flash.sh -B ./u-boot.bin p3448-0000-max-spi external
-cd ..
+cd ../..
